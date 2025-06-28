@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Welcome from "./pages/welcome";
-import Login from "./pages/login";
-import Register from "./pages/register";
+import Welcome from "./pages/Welcome";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Dashboard from "./pages/dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import Chapter1 from "./pages/chapter1";
