@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     if (!token) return;
 
     axios
-      .get("http://localhost:5000/api/profile", {
+      .get("https://english-app-production-174b.up.railway.app/api/profile", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data))

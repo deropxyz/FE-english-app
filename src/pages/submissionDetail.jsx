@@ -14,7 +14,7 @@ const SubmissionDetail = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          "http://localhost:5000/api/admin/submissions",
+          "https://english-app-production-174b.up.railway.app/api/admin/submissions",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -45,7 +45,7 @@ const SubmissionDetail = () => {
       const token = localStorage.getItem("token");
 
       await axios.patch(
-        `http://localhost:5000/api/admin/review/${submission.id}`,
+        `https://english-app-production-174b.up.railway.app/api/admin/review/${submission.id}`,
         { manualScore: parseFloat(overallEssayScore) },
         { headers: { Authorization: `Bearer ${token}` } }
       );

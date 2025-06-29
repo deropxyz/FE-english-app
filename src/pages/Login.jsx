@@ -17,7 +17,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/login", formData);
+      const res = await axios.post(
+        "https://english-app-production-174b.up.railway.app/api/login",
+        formData
+      );
       const { token, user } = res.data;
 
       // Simpan token dan info user ke localStorage

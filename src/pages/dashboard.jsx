@@ -88,12 +88,18 @@ const Dashboard = () => {
       if (!token) return;
 
       const [profileRes, resultsRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/profile", {
-          headers: { Authorization: `Bearer ${token}` },
-        }),
-        axios.get("http://localhost:5000/api/quiz/results", {
-          headers: { Authorization: `Bearer ${token}` },
-        }),
+        axios.get(
+          "https://english-app-production-174b.up.railway.app/api/profile",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        ),
+        axios.get(
+          "https://english-app-production-174b.up.railway.app/api/quiz/results",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        ),
       ]);
 
       setUser(profileRes.data);

@@ -22,7 +22,10 @@ const Register = () => {
     e.preventDefault();
     setErrors({});
     try {
-      await axios.post("http://localhost:5000/api/register", formData);
+      await axios.post(
+        "https://english-app-production-174b.up.railway.app/api/register",
+        formData
+      );
       navigate("/login");
     } catch (error) {
       const errorMessage =

@@ -24,7 +24,7 @@ const UserSubmissions = () => {
         setError(null);
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          "http://localhost:5000/api/admin/submissions",
+          "https://english-app-production-174b.up.railway.app/api/admin/submissions",
           { headers: { Authorization: `Bearer ${token}` } }
         );
 

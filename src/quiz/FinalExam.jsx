@@ -25,12 +25,16 @@ const navigateToDashboard = (state) => {
 // Placeholder untuk pemanggilan API dengan axios
 const submitQuizData = async (data) => {
   const token = localStorage.getItem("token"); // Jika pakai auth
-  return axios.post("http://localhost:5000/api/quiz/submit", data, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-  });
+  return axios.post(
+    "https://english-app-production-174b.up.railway.app/api/quiz/submit",
+    data,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }
+  );
 };
 
 const quizData = [

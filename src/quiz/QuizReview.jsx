@@ -11,7 +11,7 @@ const QuizReview = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          "http://localhost:5000/api/quiz/result/last",
+          "https://english-app-production-174b.up.railway.app/api/quiz/result/last",
           {
             headers: {
               Authorization: `Bearer ${token}`,
